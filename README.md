@@ -1,30 +1,64 @@
-# vue-toast
+# Vue-Toast
 
-> A Vue.js project
+> a toast plugin for Vue.js
 
-## Build Setup
+## Features
 
-``` bash
-# install dependencies
-npm install
+- Supports both Vue 1.x and 2.x
+- Simple
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Installation
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+```Bash
+npm i vue-toast
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Usage
+
+index.js
+
+```javascript
+import Vue from 'vue'
+import Toast from 'vue-toast'
+
+Vue.use(Toast)
+```
+
+App.vue
+
+```javascript
+export default {
+  methods: {
+    success () {
+      this.$toast(this.$refs.success, 'Wonderful!', 'success')
+    },
+
+    warning () {
+      this.$toast(this.$refs.warning, 'Attention!', 'warning', 3000)
+    },
+
+    info () {
+      this.$toast(this.$refs.info, 'Infomation!', 'info', 1000, 100)
+    },
+
+    error () {
+      this.$toast(this.$refs.error, 'Opps!', 'error', 2000, 500, 600)
+    }
+  }
+}
+```
+
+## Options
+
+|Option|Description|Value|Default|
+|---|---|---|---|
+|el|target element|||
+|text|content of the toast|||
+|type|type of the toast|'success' 'warning' 'info' 'error'||
+|duration|time before the toast vanishes, in millisecond||4000
+|top|the distance between the top of the document, in px||right of the target element
+|left|the distance between the left of the document, in px||bottom of the target element
+
+## License
+
+MIT

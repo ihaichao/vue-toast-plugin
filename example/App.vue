@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+      <div class="success btn" ref="success" @click="success">success</div>
+      <div class="warning btn" ref="warning" @click="warning">warning</div>
+      <div class="info btn" ref="info" @click="info">info</div>
+      <div class="error btn" ref="error" @click="error">error</div>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-
 export default {
   name: 'app',
-  components: {
-    Hello
+
+  methods: {
+    success () {
+      this.$toast(this.$refs.success, 'Wonderful!', 'success')
+    },
+
+    warning () {
+      this.$toast(this.$refs.warning, 'Attention!', 'warning')
+    },
+
+    info () {
+      this.$toast(this.$refs.info, 'Infomation!', 'info')
+    },
+
+    error () {
+      this.$toast(this.$refs.error, 'Opps!', 'error')
+    }
   }
 }
 </script>
@@ -24,5 +39,30 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  color: #fff;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 10px auto 50px;
+}
+
+.success {
+  background-color: #47d279;
+}
+
+.warning {
+  background-color: #ffb243;
+}
+
+.info {
+  background-color: #48BBF8;
+}
+
+.error {
+  background-color: #ff6464;
 }
 </style>

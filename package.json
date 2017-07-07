@@ -1,9 +1,9 @@
 {
   "name": "vue-toast",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "A toast plugin for Vue.js",
+  "main": "./src/index.js",
   "author": "zhangzongzheng <zzzhaichao@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -13,10 +13,20 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
-  "dependencies": {
-    "vue": "^2.3.3"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ihaichao/vue-toast.git"
+  },
+  "keywords": [
+    "vue",
+    "toast"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ihaichao/vue-toast/issues"
   },
   "devDependencies": {
+    "vue": "^2.3.3",
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -81,6 +91,7 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
   },
+  "homepage": "https://github.com/ihaichao/vue-toast#readme",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"

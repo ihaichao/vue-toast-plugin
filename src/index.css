@@ -1,0 +1,56 @@
+.vue-toast {
+  position: absolute;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  color: #fff;
+  animation: toast-move-in-top cubic-bezier(.22, .58, .12, .98) .4s;
+  z-index: 10000;
+}
+
+.vue-toast.success {
+  background-color: #47d279;
+  box-shadow: 0 .2em .1em .1em rgba(71, 210, 121, .2);
+}
+
+.vue-toast.warning {
+  background-color: #ffb243;
+  box-shadow: 0 .2em .1em .1em rgba(255, 190, 68, .2);
+}
+
+.vue-toast.info {
+  background-color: #48BBF8;
+  box-shadow: 0 .2em .1em .1em rgba(72, 187, 248, .2);
+}
+
+.vue-toast.error {
+  background-color: #ff6464;
+  box-shadow: 0 .2em 1em .1em rgba(255, 100, 100, .2);
+}
+
+.vue-toast.hide {
+  animation: toast-fade-out cubic-bezier(.22, .58, .12, .98) .4s forwards;
+}
+
+@keyframes toast-move-in-top {
+  from {
+    opacity: 0;
+    transform: translate(0, 5em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes toast-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

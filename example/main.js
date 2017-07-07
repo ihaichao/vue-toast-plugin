@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 
+import Toast from '../src/index'
+
 Vue.config.productionTip = false
+Vue.use(Toast)
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,7 +1,7 @@
 {
-  "name": "vue-simple-toast",
+  "name": "vue-toast-plugin",
   "version": "1.0.0",
-  "description": "A toast plugin for Vue.js",
+  "description": "A simple toast plugin for Vue.js",
   "main": "./src/index.js",
   "author": "zhangzongzheng <zzzhaichao@gmail.com>",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ihaichao/vue-toast.git"
+    "url": "https://github.com/ihaichao/vue-toast-plugin.git"
   },
   "keywords": [
     "vue",
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ihaichao/vue-toast/issues"
+    "url": "https://github.com/ihaichao/vue-toast-plugin/issues"
   },
   "devDependencies": {
     "vue": "^2.3.3",
@@ -91,7 +91,7 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
   },
-  "homepage": "https://github.com/ihaichao/vue-toast#readme",
+  "homepage": "https://github.com/ihaichao/vue-toast-plugin#readme",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"

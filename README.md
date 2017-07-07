@@ -1,4 +1,4 @@
-# Vue-Simple-Toast
+# Vue-Toast-Plugin
 
 > a simple toast plugin for Vue.js
 
@@ -10,7 +10,7 @@
 ## Installation
 
 ```Bash
-npm i vue-simple-toast
+npm i vue-toast-plugin
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ index.js
 
 ```javascript
 import Vue from 'vue'
-import Toast from 'vue-simple-toast'
+import Toast from 'vue-toast-plugin'
 
 Vue.use(Toast)
 ```

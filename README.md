@@ -1,6 +1,7 @@
 # Vue-Toast-Plugin
 
 [![Build Status](https://travis-ci.org/ihaichao/vue-toast-plugin.svg?branch=master)](https://travis-ci.org/ihaichao/vue-toast-plugin)
+[![NPM Version](https://img.shields.io/badge/npm-v1.0.1-blue.svg)](https://www.npmjs.com/package/vue-toast-plugin)
 
 > a simple toast plugin for Vue.js
 

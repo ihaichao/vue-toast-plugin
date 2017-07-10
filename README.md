@@ -1,5 +1,7 @@
 # Vue-Toast-Plugin
 
+[![Build Status](https://travis-ci.org/ihaichao/vue-toast-plugin.svg?branch=master)](https://travis-ci.org/ihaichao/vue-toast-plugin)
+
 > a simple toast plugin for Vue.js
 
 ## Features

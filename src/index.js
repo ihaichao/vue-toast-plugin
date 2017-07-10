@@ -8,16 +8,16 @@ import './index.css'
 /**
  * @param {HTMLElement} el target element
  * @param {string} text content of the toast
- * @param {string} [type='info']  type of the toast  "success" || "warning" || "info" || "error"
- * @param {number} [duration=4000]  time before the toast vanishes, in millisecond
+ * @param {string} type  type of the toast  "success" || "warning" || "info" || "error"
+ * @param {number} duration  time before the toast vanishes, in millisecond
  * @param {number} top toast top
  * @param {number} left toast left
  */
-function toast (el, text, type, duration = 4000, top, left) {
+function toast (el, text, type, duration, top, left) {
   if (!el) {
     throw new Error('target element should be assigned.')
   } else {
-    const d = document.createElement('div')
+    var d = document.createElement('div')
     try {
       d.appendChild(el.cloneNode(true))
       if (el.nodeType !== 1) {
@@ -36,6 +36,7 @@ function toast (el, text, type, duration = 4000, top, left) {
     throw new Error('toast type should be one of "success, warning, info, error".')
   }
 
+  duration = duration || 4000
   if (isNaN(Number(duration))) {
     throw new Error('toast duration should be number.')
   }
@@ -48,28 +49,28 @@ function toast (el, text, type, duration = 4000, top, left) {
     throw new Error('toast left should be number.')
   }
 
-  const toastEl = document.createElement('div')
-  const rect = el.getBoundingClientRect()
-  const scrollLeft = (document.documentElement && document.documentElement.scrollLeft) || document.body.scrollLeft
-  const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop
+  var toastEl = document.createElement('div')
+  var rect = el.getBoundingClientRect()
+  var scrollLeft = (document.documentElement && document.documentElement.scrollLeft) || document.body.scrollLeft
+  var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop
 
   toastEl.style.top = (Number(top) || rect.top + rect.height + scrollTop) + 'px'
   toastEl.style.left = (Number(left) || rect.left + rect.width + scrollLeft) + 'px'
 
   toastEl.innerHTML = text
-  toastEl.className = `vue-toast ${type}`
+  toastEl.className = 'vue-toast ' + type
   document.body.appendChild(toastEl)
 
-  setTimeout(() => {
+  setTimeout(function () {
     toastEl.className += ' hide'
-    setTimeout(() => {
+    setTimeout(function () {
       toastEl.parentNode.removeChild(toastEl)
     }, 450)
   }, Number(duration))
 }
 
 export default {
-  install (Vue, options) {
+  install: function (Vue, options) {
     if (!Vue.prototype.$toast) {
       Vue.prototype.$toast = toast
     }

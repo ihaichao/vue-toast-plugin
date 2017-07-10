@@ -56,8 +56,8 @@ export default {
 |text|content of the toast|||
 |type|type of the toast|'success' 'warning' 'info' 'error'||
 |duration|time before the toast vanishes, in millisecond||4000
-|top|the distance between the top of the document, in px||right of the target element
-|left|the distance between the left of the document, in px||bottom of the target element
+|top|the distance between the top of the body and the toast element, in px||right of the target element
+|left|the distance between the left of the body and the toast element, in px||bottom of the target element
 
 ## License
 

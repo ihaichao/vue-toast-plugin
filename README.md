@@ -7,7 +7,7 @@ A simple toast plugin for Vue.js.
 
 ## Demo
 
-[Demo](https://ihaichao.github.io/vue-toast-plugin/dist/index.html)
+[Demo](https://ihaichao.github.io/vue-toast-plugin)
 
 ## Features
 
@@ -21,6 +21,8 @@ npm i vue-toast-plugin
 ```
 
 ## Usage
+
+> Need to use with webpack because css is imported in js for convenient.
 
 index.js
 

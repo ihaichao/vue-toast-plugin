@@ -47,11 +47,11 @@ export default {
     },
 
     info () {
-      this.$toast(this.$refs.info, 'Infomation!', 'info', 1000, 100)
+      this.$toast(this.$refs.info, 'Information!', 'info', 1000, 100)
     },
 
     error () {
-      this.$toast(this.$refs.error, 'Opps!', 'error', 2000, 500, 600)
+      this.$toast(this.$refs.error, 'Oops!', 'error', 2000, 500, 600)
     }
   }
 }
@@ -63,7 +63,7 @@ export default {
 |---|---|---|---|
 |el|target element|||
 |text|content of the toast|||
-|type|type of the toast|'success' 'warning' 'info' 'error'||
+|type|type of the toast|'' 'success' 'warning' 'info' 'error'||
 |duration|time before the toast vanishes, in millisecond||4000
 |top|the distance between the top of the body and the toast element, in px||right of the target element
 |left|the distance between the left of the body and the toast element, in px||bottom of the target element

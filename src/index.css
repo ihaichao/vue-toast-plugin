@@ -5,6 +5,7 @@
   border-radius: 8px;
   white-space: nowrap;
   color: #fff;
+  background-color: #000;
   animation: toast-move-in-top cubic-bezier(.22, .58, .12, .98) .4s;
   z-index: 10000;
 }

@@ -1,8 +1,9 @@
 <template>
   <div id="app">
+    <div class="default btn" ref="default" @click="defaultt">default</div>
+    <div class="info btn" ref="info" @click="info">info</div>
     <div class="success btn" ref="success" @click="success">success</div>
     <div class="warning btn" ref="warning" @click="warning">warning</div>
-    <div class="info btn" ref="info" @click="info">info</div>
     <div class="error btn" ref="error" @click="error">error</div>
   </div>
 </template>
@@ -12,6 +13,14 @@
     name: 'app',
 
     methods: {
+      defaultt () {
+        this.$toast(this.$refs.default, 'Default', '')
+      },
+
+      info () {
+        this.$toast(this.$refs.info, 'Information!', 'info')
+      },
+
       success () {
         this.$toast(this.$refs.success, 'Wonderful!', 'success')
       },
@@ -20,12 +29,8 @@
         this.$toast(this.$refs.warning, 'Attention!', 'warning')
       },
 
-      info () {
-        this.$toast(this.$refs.info, 'Infomation!', 'info')
-      },
-
       error () {
-        this.$toast(this.$refs.error, 'Opps!', 'error')
+        this.$toast(this.$refs.error, 'Oops!', 'error')
       }
     }
   }
@@ -48,6 +53,10 @@
     line-height: 50px;
     text-align: center;
     margin: 10px auto 50px;
+  }
+
+  .default.btn {
+    background-color: #000
   }
 
   .success.btn {
